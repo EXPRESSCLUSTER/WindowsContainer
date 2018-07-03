@@ -33,9 +33,47 @@
 ```
 
 ## Create iSCSI Target Cluster
+1. Create two disk. The one is for quorum disk and the other is for Cluster Shared Volume.
+
+## Connect iSCSI Disk
 
 ## Create Windows Server Failover Cluster
+1. Create a new cluster.
+   ```powershell
+   PS> New-Cluster -Name docker -node ws2016-01,ws2016-02,ws2016-03 -StaticAddress <Cluster IP Address>
+   ```
+1. Check the cluster resources.
+   ```powershell
+   PS> Get-ClusterResources
+   
+   Name                 State  OwnerGroup    ResourceType
+   ----                 -----  ----------    ------------
+   Cluster Disk 1       Online Cluster Group Physical Disk
+   Cluster Disk 1       Online Cluster Group Physical Disk
+   Cluster IP Address   Online Cluster Group IP Address
+   Cluster Name         Online Cluster Group Network Name
+   Storage Qos Resource Online Cluster Group Storage QoS Policy Manager
+   ```
+1. Check which one is Quorum Disk.
+   ```powershell
+   PS> Get-ClusterQuorum
 
+   Cluster              QuorumResource
+   -------              --------------
+   docker               Cluster Disk 1
+   ```
+1. Add the normal cluster disk to Cluster Shared Volume.
+   ```powershell
+   PS> Add-ClusterSharedVolume "Cluster Disk 2"
+   ```
+1. Ch
+   ```powershell
+   PS C:\> Get-ClusterSharedVolume
+   
+   Name           State  Node
+   ----           -----  ----
+   Cluster Disk 2 Online ws2016-243
+   ```
 ## Install Container
 
 ## Create Docker Swarm Cluster
