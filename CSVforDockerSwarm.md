@@ -138,11 +138,11 @@ Do the following steps on ws2016-01, ws2016-02 and ws2016-03.
    docker service create --name=test --mount type=bind src="C:\ClusterStorage\Volume1\share" "dst=C:\mydata" --endpoint-mode dnsrr --network=oln -d -t microsoft/windowsservercore cmd.exe
    ```
 1. Check if the service is available.
-  ```bat
-  C:\> docker service ls
-  ID            NAME  MODE        REPLICAS  IMAGE                            PORTS
-  l0597119sben  test  replicated  1/1       microsoft/windowsservercore:1803        
-  ```
+   ```bat
+   C:\> docker service ls
+   ID            NAME  MODE        REPLICAS  IMAGE                            PORTS
+   l0597119sben  test  replicated  1/1       microsoft/windowsservercore:1803        
+   ```
 1. Chekc if the service is running.
    ```bat
    C:\> docker service ps test
