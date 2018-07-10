@@ -53,7 +53,7 @@
    Name                 State  OwnerGroup    ResourceType
    ----                 -----  ----------    ------------
    Cluster Disk 1       Online Cluster Group Physical Disk
-   Cluster Disk 1       Online Cluster Group Physical Disk
+   Cluster Disk 2       Online Cluster Group Physical Disk
    Cluster IP Address   Online Cluster Group IP Address
    Cluster Name         Online Cluster Group Network Name
    Storage Qos Resource Online Cluster Group Storage QoS Policy Manager
