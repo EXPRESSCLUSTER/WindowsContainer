@@ -48,7 +48,7 @@
    ```
 1. Check the cluster resources.
    ```powershell
-   PS> Get-ClusterResources
+   PS> Get-ClusterResource
    
    Name                 State  OwnerGroup    ResourceType
    ----                 -----  ----------    ------------
