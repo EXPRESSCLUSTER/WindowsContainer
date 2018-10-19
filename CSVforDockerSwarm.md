@@ -83,20 +83,8 @@
    C:\> mkdir C:\ClusterStorage\Volume1\share
    ```
 ## Install Docker
-Do the following steps on ws2016-01, ws2016-02 and ws2016-03.
-1. Install Docker-Microsoft PackageManagement Provider.
-   ```powershell
-   PS> Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
-   ```
-1. Install the latest Docker.
-   ```powershell
-   PS> Install-Package -Name docker -ProviderName DockerMsftProvider
-   ```
-1. Restart the servers.
-1. Get a container image to create a container service.
-   ```bat
-   C:\> docker pull microsoft/windowsservercore
-   ```   
+Do the following steps on ws2016-01, ws2016-02 and ws2016-03.<br>
+https://github.com/EXPRESSCLUSTER/WindowsContainer/blob/master/ContainerSetup.md
 
 ## Create Docker Swarm Cluster
 1. Run the following command on ws2016-01 to initialize a swarm cluster.
