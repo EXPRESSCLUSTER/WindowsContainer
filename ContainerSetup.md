@@ -48,3 +48,9 @@ If you install Windows Server with Desktop experience, you can install container
    ```powershell
    PS> Start-Service Docker
    ```
+
+## See Also
+* Container Host Deployment - Windows Server
+  * https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server
+* Install Docker Enterprise Edition for Windows Server
+  * https://docs.docker.com/install/windows/docker-ee/
